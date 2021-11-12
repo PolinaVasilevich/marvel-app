@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+
+.single-char {
+  &__wrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 50px;
+    align-content: start;
+    justify-content: space-between;
+  }
+
+  &__img {
+    margin-right: 50px;
+    width: 293px;
+    height: 450px;
+
+    object-fit: unset;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  &__text {
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}

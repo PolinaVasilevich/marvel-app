@@ -1,0 +1,76 @@
+@import "../styles/variables.scss";
+
+.button {
+  padding: 11px 18px;
+  min-width: 101px;
+
+  text-transform: uppercase;
+  color: $white;
+  display: inline-block;
+
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+  background-color: $grey;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    display: block;
+
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 0 11px 11px;
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: $main-color;
+  }
+
+  &__main {
+    background-color: $grey;
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+
+  &__secondary {
+    background-color: $main-color;
+    &:hover {
+      background-color: $grey;
+    }
+  }
+
+  &__white-brg {
+    &::before,
+    &::after {
+      border-color: transparent $white;
+    }
+  }
+
+  &__dark-brg {
+    &::before,
+    &::after {
+      border-color: transparent $dark;
+    }
+  }
+}

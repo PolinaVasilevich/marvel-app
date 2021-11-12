@@ -1,0 +1,48 @@
+.char-list {
+  &__grid {
+    display: grid;
+    //   grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: space-between;
+    column-gap: 25px;
+    row-gap: 30px;
+  }
+
+  .button {
+    display: block;
+    width: 170px;
+    margin: 45px auto;
+  }
+}
+
+@import "../../styles/variables.scss";
+
+.char-card {
+  width: 200px;
+  height: 318px;
+  background-color: $dark;
+
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__name {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    filter: drop-shadow(0px 5px 20px #9f0013);
+    cursor: pointer;
+  }
+
+  &__selected {
+    filter: drop-shadow(0px 5px 20px #9f0013);
+  }
+}

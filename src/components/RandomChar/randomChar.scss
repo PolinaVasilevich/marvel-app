@@ -1,0 +1,83 @@
+@import "../../styles/variables.scss";
+
+.random-char {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 50%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  &__container {
+    padding: 34px 35px;
+    display: grid;
+    grid-template-columns: 180px auto;
+    column-gap: 30px;
+  }
+
+  &__img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__btns {
+    margin-top: 24px;
+    .button:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
+
+  &__static {
+    position: relative;
+    padding: 40px 35px;
+
+    background: $dark;
+
+    color: $white;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.045em;
+    &:nth-child(2) {
+      margin-top: 33px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    bottom: 14px;
+    right: -37px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .random-char {
+    width: 100%;
+    display: block;
+    &__static {
+      display: none;
+    }
+  }
+}
