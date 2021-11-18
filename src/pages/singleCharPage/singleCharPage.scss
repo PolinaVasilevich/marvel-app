@@ -1,32 +1,23 @@
 @import "../../styles/variables.scss";
 
-.single-char {
-  &__wrapper {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 50px;
-    align-content: start;
-    justify-content: space-between;
-  }
-
-  &__img {
-    margin-right: 50px;
+.single-comic {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 293px 550px auto;
+  column-gap: 50px;
+  align-items: start;
+  &__char-img {
     width: 293px;
-    height: 450px;
-
-    object-fit: unset;
+    height: 293px;
   }
-
-  &__title {
+  &__name {
     font-weight: bold;
     font-size: 22px;
-    line-height: 26px;
+    line-height: 29px;
   }
-
-  &__text {
-    margin-top: 25px;
+  &__descr {
     font-size: 18px;
-    line-height: 21px;
+    line-height: 24px;
+    margin-top: 25px;
   }
 }
